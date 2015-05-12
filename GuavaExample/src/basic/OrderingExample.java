@@ -44,6 +44,23 @@ public class OrderingExample {
 		
 		
 	}
+	
+	static void usingToStringTest(){
+		List<String> names = Lists.newArrayList("apple","banana","orange","bread",
+												"cat","dog","foo","111");
+		List<String> lexOrderList  = Ordering.usingToString().sortedCopy(names);
+		// same
+		System.out.println("lexicographical  order:" + lexOrderList);
+		System.out.println("natural order:" +Ordering.natural().sortedCopy(names));
+				
+	}
+	
+	static void greatestOfTest(){
+		List<Integer> numberList = Lists.newArrayList(2333,411233,4443,413,334,5,3,1,4,5);
+		List<Integer> subList = Ordering.natural().greatestOf(numberList, 3);
+		System.out.println(subList);
+	}
+	
 	static void itemOrderingTest(){
 		List<Item> items = Lists.newArrayList(
 				new Item("jack",23),
@@ -89,6 +106,8 @@ public class OrderingExample {
 	public static void main(String[] args) {
 		//naturalTest();
 		//itemOrderingTest();
-		MaxMinTest();
+		//MaxMinTest();
+		//usingToStringTest();
+		greatestOfTest();
 	}
 }
