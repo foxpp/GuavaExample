@@ -42,6 +42,7 @@ public class OrderingExample {
 		System.out.println("order: "+ orderList);
 		System.out.println("order? :" + Ordering.natural().isOrdered(orderList));
 		
+		
 	}
 	static void itemOrderingTest(){
 		List<Item> items = Lists.newArrayList(
@@ -74,8 +75,20 @@ public class OrderingExample {
 		System.out.println("reverse name : " + nameOrdering.reverse().sortedCopy(items));
 		
 	}
+	static void MaxMinTest(){
+		Integer  maxNum = Ordering.natural().max(Lists.newArrayList(33,44,1,3,4,2,4));
+		System.out.println(maxNum);
+		Integer minNum = Ordering.natural().min(3,45,13,4,13,-1);
+		System.out.println(minNum);
+		String maxString = Ordering.natural().max(Lists.newArrayList("jack","foo","tom","a"));
+		System.out.println(maxString);
+		String minString = Ordering.natural().min("jack","foo","tom","a","1");
+		System.out.println(minString);
+	}
+	
 	public static void main(String[] args) {
 		//naturalTest();
 		//itemOrderingTest();
+		MaxMinTest();
 	}
 }
