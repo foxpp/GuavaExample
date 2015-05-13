@@ -3,6 +3,7 @@ package basic;
 import java.util.List;
 
 import com.google.common.base.Function;
+import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Ordering;
 
@@ -101,13 +102,28 @@ public class OrderingExample {
 		System.out.println(maxString);
 		String minString = Ordering.natural().min("jack","foo","tom","a","1");
 		System.out.println(minString);
+		
 	}
 	
+	static void BISearch(){
+		List<Integer> orderedList = Ordering.natural().sortedCopy(Lists.newArrayList(1,35,66,7,3));
+		System.out.println(orderedList);
+		//return the element in the list's index
+		int index = Ordering.natural().binarySearch(orderedList, 7);
+		System.out.println(index);
+		
+	}
 	public static void main(String[] args) {
 		//naturalTest();
 		//itemOrderingTest();
 		//MaxMinTest();
 		//usingToStringTest();
-		greatestOfTest();
+		//greatestOfTest();
+		BISearch();
+		ImmutableMap<String,String> immutableMap = ImmutableMap.of(
+				"key1","val1",
+				"key2","val2");
+		System.out.println(immutableMap);
+	
 	}
 }

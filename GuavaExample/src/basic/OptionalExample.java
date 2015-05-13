@@ -1,7 +1,6 @@
 package basic;
 
 import com.google.common.base.Optional;
-import com.google.common.base.Strings;
 
 public class OptionalExample {
 	
@@ -15,6 +14,5 @@ public class OptionalExample {
 	}
 	public static void main(String[] args) {
 		
-
 	}
 }
