@@ -113,17 +113,13 @@ public class OrderingExample {
 		System.out.println(index);
 		
 	}
+
 	public static void main(String[] args) {
 		//naturalTest();
 		//itemOrderingTest();
 		//MaxMinTest();
 		//usingToStringTest();
 		//greatestOfTest();
-		BISearch();
-		ImmutableMap<String,String> immutableMap = ImmutableMap.of(
-				"key1","val1",
-				"key2","val2");
-		System.out.println(immutableMap);
-	
+		//BISearch();
 	}
 }
